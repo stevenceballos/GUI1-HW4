@@ -1,0 +1,82 @@
+<!--
+File: index.html
+HW 4 GUI Assignment: jQuery and Sliders
+Steven Ceballos, UMass Lowell Computer Science, steven_ceballos@student.uml.edu
+November 28, 2022 at 1:43 PM    
+-->
+
+<!DOCTYPE html>
+<html lang="en-us">
+    <head>
+      <!-- get needed css and charset linked to the html file-->
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>HW4</title>
+        <link rel="stylesheet" href="css/style.css">
+        <link rel="stylesheet" href="css/jquery-ui.min.css">
+    </head>
+
+    <body>
+       <!-- This is the main area of the input form containing the submit button-->
+       <div class="row">
+        <div class="col-md-12">
+          <div class="form">
+          <h1>HW 4 GUI Assignment: jQuery and Sliders</h1>
+          <form id="subForm">
+
+            <!-- get the start and end numbers of rows -->
+            Enter four numbers (range -50 to 50) to generate a dynamic multiplication table.<br><br>
+            <fieldset>
+            <legend>Please enter the range of multiplier from start to end:</legend>
+            <input type="text" id="row1" name="row1" placeholder="Start" value="0" />
+                <br>
+            <div id="xBegin" class="ui-slider ui-slider-horizontal ui-widget ui-widget-content ui-corner-all"></div>
+                <span class="row1Text"></span>
+                <br>
+            <input type="text" id="row2" name="row2" placeholder="End" value="0" />
+                <br>
+            <div id="xEnd" class="ui-slider ui-slider-horizontal ui-widget ui-widget-content ui-corner-all"></div>
+                <span class="row2Text"></span>
+                <br>
+            </fieldset>
+            <br>
+            <fieldset>
+            <!-- get the start and end numbers of columns -->
+            <legend>Please enter the range of numbers from start to end:</legend>
+            <input type="text" id="col1" name="col1" placeholder="Start" value="0" />
+                <br>
+            <div id="yBegin" class="ui-slider ui-slider-horizontal ui-widget ui-widget-content ui-corner-all"></div>
+                <span class="col1Text"></span>
+                <br>
+            <input type="text" id="col2" name="col2" placeholder="End" value="0" />
+                <br>
+            <div id="yEnd" class="ui-slider ui-slider-horizontal ui-widget ui-widget-content ui-corner-all"></div>
+                <span class="col2Text"></span>
+                <br>
+            </fieldset>
+            <br>
+          <!-- submit button  -->
+          <input class="button" type="button" value="Generate Table">
+          </form>
+        </div>
+      </div>
+      </div>
+      <br>
+      <div id="table">
+      </div>
+      <br><br>
+      <!-- dedicate space for tabs -->
+      <div id="tabs"><ul></ul></div>
+      <!-- dedicated space for the delete all button -->
+      <div id="rm"></div>
+
+      <!-- JS files -->
+      <script src="js/jquery-3.4.1.min.js"></script>
+      <script src="js/jquery.validate.min.js"></script>
+      <script src="js/input.validate.js"></script>
+      <script src="js/table.js"></script>
+      <script src="js/jquery-ui.min.js"></script>
+      <script src="js/sliderTab.js"></script>
+
+  </body>
+</html>
